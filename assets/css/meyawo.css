@@ -596,12 +596,8 @@ pre code {
 
 .row {
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -1170,7 +1166,7 @@ pre code {
     -webkit-flex: 0 0 33.33333%;
         -ms-flex: 0 0 33.33333%;
             flex: 0 0 33.33333%;
-    max-width: 33.33333%;
+    max-width: 33.33333%;    
   }
   .col-md-5 {
     -webkit-box-flex: 0;
@@ -11214,8 +11210,8 @@ p {
   opacity: 0;
   background-image: -webkit-linear-gradient(bottom, #e1dfed 0%, rgba(225, 223, 237, 0.7) 99%, rgba(225, 223, 237, 0.8) 100%);
   background-image: linear-gradient(to top, #e1dfed 0%, rgba(225, 223, 237, 0.7) 99%, rgba(225, 223, 237, 0.8) 100%);
-  -webkit-transition: all, 0.3s;
-  transition: all, 0.3s;
+  -webkit-transition: all, 0.1s;
+  transition: all, 0.1s;
   width: 0;
   height: 0;
   border-radius: 50%;
@@ -11617,6 +11613,7 @@ pre .code {
 
 .custom-navbar {
   position: fixed;
+  color: #000;
   top: 0;
   left: 0;
   width: 100%;
@@ -12105,6 +12102,7 @@ pre .code {
 .header .header-content .header-title .up {
   font-size: calc(30px + (60 - 30) * ((100vw - 300px) / (1300 - 300)));
   font-weight: 500;
+  margin-left: -150px;
   color: #444;
   margin-bottom: 5px;
   position: relative;
@@ -12114,6 +12112,7 @@ pre .code {
 .header .header-content .header-title .down {
   font-size: calc(30px + (75 - 30) * ((100vw - 300px) / (1300 - 300)));
   margin-bottom: 0;
+  margin-left: -150px;
   position: relative;
   display: block;
 }
@@ -12122,8 +12121,9 @@ pre .code {
   font-size: calc(50px + (22 - 10) * ((100vw - 300px) / (1300 - 300)));
   letter-spacing: calc(1px + (7 - 1) * ((100vw - 300px) / (1300 - 300)));
   opacity: .8;
+  margin-left: -150px;
   margin-top: -10px;
-  margin-bottom: 20px;
+  margin-bottom: 20px;  
 }
 
 .header .header-content .header-subtitle {
@@ -12132,6 +12132,7 @@ pre .code {
   opacity: .8;
   margin-top: -10px;
   margin-bottom: 20px;
+  margin-left: -130px;
 }
 
 .header .header-content .btn {
@@ -12207,7 +12208,7 @@ pre .code {
 }
 
 .about-img-holder .about-img {
-  width: 100%;
+  width: 200%;
   margin-bottom: 15px;
 }
 
@@ -12248,6 +12249,12 @@ pre .code {
 .section .section-subtitle {
   margin-bottom: 6px;
   font-weight: 400;
+  opacity: .6;
+}
+.section .section-subtitle-huge {
+  margin-bottom: 6px;
+  font-size: large;
+  font-weight: 500;
   opacity: .6;
 }
 
