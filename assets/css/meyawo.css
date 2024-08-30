@@ -12239,11 +12239,14 @@ pre .code {
 
 /* sections */
 .section {
-  padding: 70px 10px;
+  padding: 20px 10px;
 }
 
 .section .section-title {
   font-size: calc(20px + (35 - 20) * ((100vw - 300px) / (1300 - 300)));
+}
+.section .section-centre {
+  font-size: 30;
 }
 
 .section .section-subtitle {
