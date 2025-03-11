@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+/* Dark Theme */
+body.dark-theme {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
+}
+
+/* Canvas Controls */
+.canvas-controls {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.canvas-controls label {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.canvas-controls input[type="range"] {
+    width: 150px;
+    margin-right: 10px;
+}
+
+.canvas-controls span {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* Canvas */
+.canvas {
+    width: 1500px; /* Default canvas width */
+    height: 700px; /* Default canvas height */
+    overflow: auto; /* Add scrollbars if content overflows */
+    border-radius: 10px;
+    margin: 0 auto; /* Center the canvas */
+    padding: 10px; /* Padding inside the canvas */
+    background-color: #1e1e1e; /* Dark background */
+}
+
+/* Back to Home Button */
+.back-to-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-to-home:hover {
+    background-color: #0056b3;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Space between tabs */
+    margin-bottom: 40px;
+    border-bottom: 1px solid #333; /* Line below tabs */
+    padding-bottom: 10px; /* Space between tabs and line */
+}
+
+.tab-button {
+    background: none; /* No background */
+    border: none;
+    color: #ffffff; /* Text color */
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 0; /* Padding for clickable area */
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.tab-button:hover {
+    color: #007BFF; /* Hover color */
+}
+
+.tab-button.active {
+    font-weight: bold;
+    color: #007BFF; /* Active tab color */
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -11px; /* Position underline below the tab */
+    left: 0;
+    width: 100%;
+    height: 3px; /* Thickness of the underline */
+    background-color: #007BFF; /* Color of the underline */
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+    gap: 10px; /* No gap between cards */
+    margin-bottom: 40px;
+    justify-items: center; /* Center-align cards horizontally */
+}
+
+/* Project Card */
+.project-card {
+    background-color: #1b1d22; /* Dark card background */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensure cards take up available space */
+    max-width: 200px; /* Limit card width */
+    height: 250px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0; /* Remove any default margin */
+    cursor: pointer; /* Show pointer on hover */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Section (50% of card height) */
+.project-card .video-preview {
+    height: 165px; /* 50% of 250px */
+    width: 100%; /* Full width */
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.project-card .video-preview img,
+.project-card .video-preview iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image/video covers the area */
+    border-radius: 10px;
+}
+
+.project-card h4 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+    height: 10px; /* 20% of 250px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card p {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin-bottom: 0;
+    height: 70px; /* 30% of 250px */
+    overflow-y: auto; /* Add scrollbar if text overflows */
+    padding: 5px; /* Add some padding */
+    width: 100%; /* Take full width */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Custom Scrollbar for Description */
+.project-card p::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+}
+
+.project-card p::-webkit-scrollbar-track {
+    background: #333; /* Color of the track */
+    border-radius: 3px; /* Rounded corners */
+}
+
+.project-card p::-webkit-scrollbar-thumb {
+    background: #007BFF; /* Color of the scrollbar thumb */
+    border-radius: 3px; /* Rounded corners */
+}
+
+.project-card p::-webkit-scrollbar-thumb:hover {
+    background: #0056b3; /* Color of the scrollbar thumb on hover */
+}
+
+/* Video Preview */
+.video-preview {
+    width: 100%;
+    height: 120px; /* Fixed height for video preview */
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.video-preview iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Hide initially */
+}
+
+.video-preview .thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.project-card:hover .video-preview iframe {
+    opacity: 1; /* Show on hover */
+}
+
+/* Popup Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-content iframe {
+    width: 100%;
+    height: 400px; /* Fixed height for video */
+    border: none;
+    border-radius: 10px;
+}
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+        gap: 10px;
+    }
+
+    .tab-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    .canvas {
+        width: 300px; /* Default canvas width */
+        height: 100%; /* Default canvas height */
+    }
+}
