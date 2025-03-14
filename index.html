@@ -70,8 +70,8 @@
             <!-- Experience 1 -->
             <div class="timeline-item">
                 <div class="timeline-card">
-                    <h3>Unity Developer</h3>
-                    <p class="company">XReality Solutions Privated Limited</p>
+                    <h3>XReality Solutions Privated Limited</h3>
+                    <p class="company">Unity Developer</p>
                     <p class="duration">2023 - Present</p>
                     <ul>
                         <li>Developing VR/AR experiences for car refinement and refitment, enhancing user engagement.
@@ -84,8 +84,8 @@
             <!-- Experience 2 -->
             <div class="timeline-item">
                 <div class="timeline-card">
-                    <h3>Unity Developer</h3>
-                    <p class="company">Moong Labs Technologies Pvt Ltd</p>
+                    <h3>Moong Labs Technologies Pvt Ltd</h3>
+                    <p class="company">Unity Developer</p>
                     <p class="duration">2023 - 2023</p>
                     <ul>
                         <li>Contributed to Unity-based cricket game development, including debugging and feature
@@ -98,8 +98,8 @@
             <!-- Experience 3 -->
             <div class="timeline-item">
                 <div class="timeline-card">
-                    <h3>Unity Developer</h3>
-                    <p class="company">GameEon Studio PVT LTD</p>
+                    <h3>GameEon Studio PVT LTD</h3>
+                    <p class="company">Unity Developer</p>
                     <p class="duration">2022 - 2023</p>
                     <ul>
                         <li>Worked as a Unity programmer to develop interesting and attractive Hyper Casual Games.</li>
@@ -113,8 +113,8 @@
             <!-- Experience 4 -->
             <div class="timeline-item">
                 <div class="timeline-card">
-                    <h3>Unity Developer</h3>
-                    <p class="company">Firescore Interactive PVT. LTD.</p>
+                    <h3>Firescore Interactive PVT. LTD.</h3>
+                    <p class="company">Unity Developer</p>
                     <p class="duration">2020 - 2022</p>
                     <ul>
                         <li>Worked as a Hyper Casual Mobile Game Programmer.</li>
@@ -127,11 +127,50 @@
                 <a href="projects.html" class="timeline-card special-card">
                     <h3>Work Showcase</h3>
                     <p>Explore all the projects I've worked on throughout my journey.</p>
-                    <i class="fas fa-arrow-right"></i> 
+                    <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
     </section>
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to fill out the form below, and I'll get back to you as soon as
+                possible.</p>
+
+            <!-- Contact Form -->
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xovevqwo" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+
+            <!-- Social Media Links (Optional) -->
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/dhirajlal/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/dhiraj7894" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:dhirajv224@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
     <!-- JavaScript for Navigation Toggle -->
     <script>
         const navToggle = document.querySelector('.nav-toggle');
@@ -139,6 +178,28 @@
 
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('nav-menu-visible');
+        });
+        // Contact Form Submission
+        const contactForm = document.getElementById('contact-form');
+
+        contactForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Log the data (you can replace this with an API call to send the data to your server)
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Message:', message);
+
+            // Show a success message (optional)
+            alert('Thank you for reaching out! I will get back to you soon.');
+
+            // Clear the form
+            contactForm.reset();
         });
     </script>
 </body>
